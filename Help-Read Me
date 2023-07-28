@@ -1,0 +1,17 @@
+# How to launch hub and nodes
+
+HUB:
+java -jar selenium-server-standalone-3.9.1.jar -role hub
+
+NODES:
+ChromeBrowser:
+	java -Dwebdriver.chrome.driver="Copy WebDriver Path Here" -jar selenium-server-standalone-3.9.1.jar -role node -hub http://192.168.1.97:4444/grid/register
+
+FirefoxBrowser:
+	java -Dwebdriver.firefox.driver="Copy WebDriver Path Here" -jar selenium-server-standalone-3.9.1.jar -role node -hub http://192.168.1.97:4444/grid/register
+
+EdgeBrowser:
+	java -Dwebdriver.edge.driver="Copy WebDriver Path Here" -jar selenium-server-standalone-3.9.1.jar -role node -hub http://192.168.1.97:4444/grid/register
+
+LAUNCH BROWSER:
+-	Check if the node has been connect with the Hub Server -- http://192.168.1.97:4444/grid/console#
